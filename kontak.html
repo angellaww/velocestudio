@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELOCE Studio — Kontak &amp; Pertanyaan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== KEPALA / HEADER ===== -->
+<header class="kepala-utama">
+  <div class="kepala-wadah">
+    <div class="merek-logo">
+      <img alt="Logo VELOCE Studio" class="logo-gambar" src="https://lh3.googleusercontent.com/aida/AEtjO1XhssaGT2Csq0-9QtGtdWe1yT5wCaBfsR7wW0Dh_pzIfrSQO3DSlUr9Ty1Iqg-k0-Vwk6Q6uIsEFR6oyIRpCdIBhFZwarcdrPmIaoSUvHSfjHIlgrawfo7Ltacr-gn64HSs1cU43fVKSX1RA0QjfPf5Dezp3Z0WOnRJuiSfqw5WINNVzage7nK-5g1VaU4bRPaqFNyXLTeR0LIuDj7XN1QpvJH2rVY3WFnzSQt984RhAUv_nEZCmOBhopU">
+      <div class="merek-teks">
+        <span class="merek-nama">VELOCE</span>
+        <span class="merek-sub">Studio Haute Couture</span>
+      </div>
+    </div>
+
+    <nav class="navigasi-utama">
+      <a class="tautan-nav" data-path="studio-home" href="index.html">Studio (Beranda)</a>
+      <a class="tautan-nav" data-path="collections-works" href="koleksi.html">Koleksi &amp; Karya</a>
+      <a class="tautan-nav" data-path="case-study" href="studi-kasus.html">Studi Kasus</a>
+      <a class="tautan-nav" data-path="services-atelier" href="layanan.html">Layanan &amp; Atelier</a>
+      <a class="tautan-nav aktif" aria-current="page" data-path="contact-inquiries" href="kontak.html">Kontak &amp; Pertanyaan</a>
+    </nav>
+
+    <div class="kepala-kanan">
+      <div class="profil-pengguna">
+        <img alt="Foto Profil" class="profil-gambar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGBLTnyorT9uRk6l3lA0bRn0BcjbxRL7dz7kf-hWf-fJR9ZqHGaiQHopZ_5IGdmOp3-VZAdFbePE6p9LRpWL8oXDHzT88RpymMeaNFcanRAwHTQIfkZuEWGbxarx-mNXVQV9E47QUChLLYuZEIpSH5SIbTDmf51t_pPEGMTD3OSYLjHixDcTAwdeFOA_OJD8qVTq9yXiQgoESQPNFIx6VZBkm8ftkkc6x7D_X6sIy6849OU3l_xFYh1w">
+        <div class="profil-teks">
+          <span class="profil-nama">Hélène V.</span>
+          <span class="profil-jabatan">Creative Director</span>
+        </div>
+      </div>
+      <div class="pemisah-vertikal"></div>
+      <a class="tombol-utama" data-path="contact-inquiries" href="kontak.html">Minta Lookbook</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== KONTEN UTAMA ===== -->
+<main class="konten-utama">
+
+  <!-- Header Hero Editorial -->
+  <section class="kontak-hero">
+    <div class="kontak-hero-grid">
+      <div class="kontak-hero-kiri">
+        <div class="label-bar">
+          <span>Dossier N° 05</span>
+          <span class="garis-panjang"></span>
+          <span>Atelier Engagement &amp; Commission</span>
+        </div>
+        <h1 class="judul-kontak-utama">Mulai Kolaborasi</h1>
+        <p class="kontak-intro">Kami bermitra dengan rumah mode visioner, merek mewah warisan, dan pelanggan privat terpilih di seluruh dunia. Mari kita wujudkan koleksi, narasi runway, atau busana bespoke berikutnya menjadi kenyataan yang nyata.</p>
+      </div>
+      <div class="kontak-hero-kanan">
+        <div class="kartu-konfidensial">
+          <div class="konfidensial-kepala">
+            <span class="material-symbols-outlined ikon-emas">verified_user</span>
+            <span>Kerahasiaan Klien</span>
+          </div>
+          <p class="konfidensial-teks">Semua dossier klien prospektif, sketsa struktural, dan konsultasi awal dilindungi di bawah NDA internasional timbal balik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pembangun Brief Interaktif & Mosaik Kehadiran Atelier -->
+  <section class="seksi-kontak-utama">
+    <div class="kontak-utama-grid">
+      <!-- Kolom Form (Sistem Multi-Langkah) -->
+      <div class="kolom-form">
+        <!-- Progress Tracker -->
+        <div class="tracker-wadah">
+          <div class="tracker-kepala">
+            <span class="teks-label" id="teks-indikator-langkah">Stage I • Client Identification</span>
+            <span class="teks-label" id="teks-nomor-langkah">01 / 03</span>
+          </div>
+          <div class="tracker-bar">
+            <div class="tracker-isi" id="tracker-isi" style="width:33.33%"></div>
+          </div>
+        </div>
+
+        <form class="form-inquiry" id="form-inquiry" onsubmit="event.preventDefault();">
+
+          <!-- LANGKAH 1: Identifikasi -->
+          <div class="langkah-form" id="langkah-1">
+            <div class="langkah-kepala">
+              <h2 class="judul-langkah-form">Profil Entitas</h2>
+              <p class="teks-langkah-form">Perkenalkan rumah, entitas merek, atau kantor studio privat Anda.</p>
+            </div>
+            <div class="form-isi">
+              <div class="form-grup-kontak">
+                <label>Nama Klien / Merek *</label>
+                <input id="nama-merek" placeholder="mis. Maison de L'Ombre atau Kolektor Privat" required type="text">
+              </div>
+              <div class="form-baris-dua-kontak">
+                <div class="form-grup-kontak">
+                  <label>Nama Perwakilan *</label>
+                  <input id="nama-kontak" placeholder="Nama Lengkap &amp; Jabatan" required type="text">
+                </div>
+                <div class="form-grup-kontak">
+                  <label>Alamat Email Resmi *</label>
+                  <input id="email-kontak" placeholder="direktur@domain.luxury" required type="email">
+                </div>
+              </div>
+              <div class="form-grup-kontak">
+                <label>Telepon / Signal / WhatsApp</label>
+                <input id="telp-kontak" placeholder="+33 1 40 00 00 00" type="tel">
+              </div>
+            </div>
+            <div class="form-nav">
+              <button class="tombol-lanjut" onclick="keLangkah(2)" type="button">
+                <span>Lanjut ke Lingkup Mandat</span>
+                <span class="material-symbols-outlined ikon-kecil">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- LANGKAH 2: Lingkup, Musim & Alokasi -->
+          <div class="langkah-form sembunyi" id="langkah-2">
+            <div class="langkah-kepala">
+              <h2 class="judul-langkah-form">Lingkup &amp; Kalender</h2>
+              <p class="teks-langkah-form">Pilih hasil desain yang dimaksudkan dan jadwal runway musiman.</p>
+            </div>
+            <div class="form-isi">
+              <div class="form-grup-kontak">
+                <label>Lingkup Keterlibatan Utama</label>
+                <div class="grid-pilihan-lingkup">
+                  <label class="pil-lingkup">
+                    <input checked name="lingkup" type="radio" value="Full Season Collection">
+                    <div>
+                      <span class="pil-judul">Full Season Collection</span>
+                      <span class="pil-deskripsi">32–45 rilis sistemik siluet</span>
+                    </div>
+                  </label>
+                  <label class="pil-lingkup">
+                    <input name="lingkup" type="radio" value="Capsule Series">
+                    <div>
+                      <span class="pil-judul">Capsule Series</span>
+                      <span class="pil-deskripsi">8–14 piece konsep terfokus</span>
+                    </div>
+                  </label>
+                  <label class="pil-lingkup">
+                    <input name="lingkup" type="radio" value="Runway Direction">
+                    <div>
+                      <span class="pil-judul">Runway Direction</span>
+                      <span class="pil-deskripsi">Scenografi, styling &amp; koreografi</span>
+                    </div>
+                  </label>
+                  <label class="pil-lingkup">
+                    <input name="lingkup" type="radio" value="Bespoke Commission">
+                    <div>
+                      <span class="pil-judul">Bespoke Commission</span>
+                      <span class="pil-deskripsi">Piece haute couture satu busana</span>
+                    </div>
+                  </label>
+                  <label class="pil-lingkup pil-lebar">
+                    <input name="lingkup" type="radio" value="Sustainable Advisory">
+                    <div>
+                      <span class="pil-judul">Sustainable Advisory &amp; Material R&amp;D</span>
+                      <span class="pil-deskripsi">Tekstil sirkular, regenerasi deadstock &amp; eco-sourcing</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="form-baris-dua-kontak">
+                <div class="form-grup-kontak">
+                  <label>Musim / Timeline Target</label>
+                  <select id="musim-timeline">
+                    <option value="Spring / Summer 2026">Spring / Summer 2026 (SS26)</option>
+                    <option value="Autumn / Winter 2026">Autumn / Winter 2026 (AW26)</option>
+                    <option value="Resort / Cruise 2026">Resort / Cruise 2026</option>
+                    <option value="Urgent 3-Month Sprint">Urgent 3-Month Sprint (Rapid Atelier)</option>
+                    <option value="Continuous Advisory">Continuous Advisory (Quarterly Retainer)</option>
+                  </select>
+                </div>
+                <div class="form-grup-kontak">
+                  <label>Tier Investasi Estimasi</label>
+                  <select id="tier-anggaran">
+                    <option value="$15k - $30k">$15,000 – $30,000 USD (Consulting / Capsule)</option>
+                    <option value="$30k - $75k">$30,000 – $75,000 USD (Comprehensive Collection)</option>
+                    <option value="$75k+">$75,000+ USD (Global Runway &amp; Flagship Direction)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-nav form-nav-antara">
+              <button class="tautan-kembali" onclick="keLangkah(1)" type="button">← Kembali</button>
+              <button class="tombol-lanjut" onclick="keLangkah(3)" type="button">
+                <span>Lanjut: Visi &amp; Unggah</span>
+                <span class="material-symbols-outlined ikon-kecil">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- LANGKAH 3: Visi & Moodboard -->
+          <div class="langkah-form sembunyi" id="langkah-3">
+            <div class="langkah-kepala">
+              <h2 class="judul-langkah-form">Visi Proyek &amp; Dossier</h2>
+              <p class="teks-langkah-form">Sampaikan niat tematik, referensi estetika, atau target fungsional Anda.</p>
+            </div>
+            <div class="form-isi">
+              <div class="form-grup-kontak">
+                <label>Brief Proyek / Sinopsis Estetika *</label>
+                <textarea id="brief-proyek" placeholder="Detail siluet yang diminati, demografi target, preferensi tekstil, narasi budaya, atau tenggat pameran kunci..." rows="4"></textarea>
+              </div>
+              <div class="form-grup-kontak">
+                <label>Lampiran Moodboard / Brand Deck</label>
+                <div class="dropzone" id="dropzone">
+                  <span class="material-symbols-outlined ikon-unggah">cloud_upload</span>
+                  <p class="dropzone-judul">Klik untuk Unggah atau Seret Deck</p>
+                  <p class="dropzone-sub">PDF, ZIP, AI, atau Keynote (Maks 45MB)</p>
+                  <span class="nama-file sembunyi" id="nama-file"></span>
+                  <input accept=".pdf,.zip,.ai,.key,.jpg,.png" class="sembunyi" id="file-moodboard" type="file">
+                </div>
+              </div>
+              <div class="centang-nda">
+                <input checked id="konfirmasi-nda" type="checkbox">
+                <label for="konfirmasi-nda">Kami meminta dokumen non-disclosure advance yang ditandatangani bersama oleh VELOCE Studio sebelum pertukaran visual eksploratif kami.</label>
+              </div>
+            </div>
+            <div class="form-nav form-nav-antara">
+              <button class="tautan-kembali" onclick="keLangkah(2)" type="button">← Kembali</button>
+              <button class="tombol-lanjut" onclick="kirimInquiry()" type="button">
+                <span>Kirim Pertanyaan Formal</span>
+                <span class="material-symbols-outlined ikon-kecil">send</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Konfirmasi Pengiriman -->
+          <div class="sembunyi konfirmasi-kirim" id="konfirmasi-form">
+            <div class="ikon-ceklis">
+              <span class="material-symbols-outlined ikon-besar">check</span>
+            </div>
+            <div class="teks-konfirmasi">
+              <span class="teks-label label-emas">Dossier Terdaftar</span>
+              <h2 class="judul-konfirmasi">Transmisi Diterima</h2>
+              <p>Head of Atelier kami, Hélène V., dan mitra bisnis studio akan meninjau dossier pertanyaan Anda. Memorandum konfidensial akan menyusul dalam 48 jam kerja.</p>
+            </div>
+            <button class="tautan-kembali" onclick="resetForm()" type="button">Kirim Brief Tambahan</button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Kolom Lokasi & Kanal Langsung -->
+      <div class="kolom-lokasi">
+        <!-- Foto Studio -->
+        <div class="gambar-studio">
+          <img alt="Interior atelier couture minimalis di Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxNU6GgIdwha7bngHhhd0qDE4X7kqWBdLzHbAHT5Q3vpy8OrBO0tTr9NbePsztnw1iH14DCsa6gL6BZvDrw55M719S18iWENUgWvoKowwjkcBpdAn3FIlF-28isAX2iMTM3LTZaUmfzVIZ3qkZFt0GNxUyFzRXyYc7qrg6YNjex_bLa_PX9ci5oxmbsT_KI1oX2oSirzToS7hRHNZDYOr9VMUYl3U7QiPXWGo0W6j_zdzRUudtxEEL3A">
+          <div class="gambar-studio-overlay"></div>
+          <div class="gambar-studio-label">
+            <span>Paris Main Atelier • Place Vendôme</span>
+          </div>
+        </div>
+
+        <!-- Tumpukan Lokasi Fisik -->
+        <div class="daftar-kehadiran">
+          <div class="kehadiran-kepala">
+            <span class="teks-label">Kehadiran Atelier Permanen</span>
+            <span class="teks-sangat-kecil">Berdasarkan Janji Temu</span>
+          </div>
+          <div class="kehadiran-grid">
+            <div class="kartu-kehadiran">
+              <div>
+                <span class="teks-label label-emas">Headquarters • Europe</span>
+                <h3 class="judul-kehadiran">Paris Studio</h3>
+                <p class="alamat-kehadiran">14 Rue de la Paix, 75002 Paris, France</p>
+                <p class="telp-kehadiran">Direct: +33 1 42 68 89 20</p>
+              </div>
+              <span class="jam-kehadiran">09:00 – 19:00 CET</span>
+            </div>
+            <div class="kartu-kehadiran">
+              <div>
+                <span class="teks-label label-emas">Textile R&amp;D • APAC</span>
+                <h3 class="judul-kehadiran">Jakarta Atelier</h3>
+                <p class="alamat-kehadiran">Senopati Creative District, Jakarta Selatan 12190</p>
+                <p class="telp-kehadiran">Direct: +62 21 579 0422</p>
+              </div>
+              <span class="jam-kehadiran">10:00 – 18:00 WIB</span>
+            </div>
+            <div class="kartu-kehadiran">
+              <div>
+                <span class="teks-label label-emas">Commercial Office • Italy</span>
+                <h3 class="judul-kehadiran">Milan Representative</h3>
+                <p class="alamat-kehadiran">Via Montenapoleone 18, 20121 Milano, Italy</p>
+                <p class="telp-kehadiran">Direct: +39 02 8739 1104</p>
+              </div>
+              <span class="jam-kehadiran">10:00 – 18:30 CET</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kanal Langsung -->
+        <div class="kartu-kanal-langsung">
+          <span class="teks-label">Kanal Langsung</span>
+          <div class="daftar-kanal">
+            <div class="kanal-item">
+              <span class="kanal-label">Komisi &amp; Rekrutmen</span>
+              <a class="kanal-tautan" href="mailto:inquiries@veloce.studio">inquiries@veloce.studio</a>
+            </div>
+            <div class="kanal-item">
+              <span class="kanal-label">Pers &amp; Publikasi</span>
+              <a class="kanal-tautan" href="mailto:press@veloce.studio">press@veloce.studio</a>
+            </div>
+            <div class="kanal-item">
+              <span class="kanal-label">WhatsApp VIP Concierge</span>
+              <a class="kanal-tautan kanal-inline" href="https://wa.me/33142688920" target="_blank">
+                <span>+33 7 81 90 24 55</span>
+                <span class="material-symbols-outlined ikon-kecil">north_east</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kapasitas Onboarding Mitra -->
+  <section class="seksi-kapasitas">
+    <div class="kapasitas-wadah">
+      <div class="kapasitas-grid">
+        <div class="kapasitas-kiri">
+          <span class="teks-label">Atelier Capacity • 2025/2026</span>
+          <h2 class="judul-bagian">Kohort Klien Selektif</h2>
+          <p class="kapasitas-deskripsi">Untuk mempertahankan standar keahlian ekstrem dan pengawasan material tanpa kompromi, VELOCE Studio menerima tepat delapan akun merek komprehensif per siklus musiman.</p>
+        </div>
+        <div class="kapasitas-kanan">
+          <div class="metrik-kapasitas-grid">
+            <div class="metrik-kapasitas">
+              <div class="metrik-ikon-baris">
+                <svg class="lingkaran-svg" viewBox="0 0 36 36">
+                  <path class="lingkaran-latar" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+                  <path class="lingkaran-isi" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3"></path>
+                </svg>
+                <div class="metrik-teks">
+                  <span class="metrik-besar">6 / 8</span>
+                  <span class="metrik-kecil">Slot Terisi</span>
+                </div>
+              </div>
+              <p class="metrik-deskripsi">2 slot tersisa terbuka untuk roster runway Autumn / Winter 2026.</p>
+            </div>
+
+            <div class="metrik-kapasitas">
+              <div class="metrik-ikon-baris">
+                <div class="metrik-ikon-kotak">
+                  <span class="material-symbols-outlined ikon-besar-2">schedule</span>
+                </div>
+                <div class="metrik-teks">
+                  <span class="metrik-besar">12 Wks</span>
+                  <span class="metrik-kecil">Sprint Standar</span>
+                </div>
+              </div>
+              <p class="metrik-deskripsi">Dari tesis konsep awal hingga tech pack runway akhir dan review prototipe.</p>
+            </div>
+
+            <div class="metrik-kapasitas">
+              <div class="metrik-ikon-baris">
+                <div class="metrik-ikon-kotak ikon-emas-kotak">
+                  <span class="material-symbols-outlined ikon-besar-2">copyright</span>
+                </div>
+                <div class="metrik-teks">
+                  <span class="metrik-besar">100%</span>
+                  <span class="metrik-kecil">Transfer IP Klien</span>
+                </div>
+              </div>
+              <p class="metrik-deskripsi">Semua pola CAD, formula kain, dan potongan tailoring tidak dapat dibatalkan menjadi milik Anda.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="seksi-faq">
+    <div class="faq-wadah">
+      <div class="faq-header">
+        <span class="teks-label">Klarifikasi Prasyarat</span>
+        <h2 class="judul-bagian">Pertanyaan yang Sering Diajukan</h2>
+        <p class="faq-deskripsi">Protokol esensial terkait fabrikasi sampel, volume pesanan minimum, perlindungan IP, dan jadwal pembayaran untuk akun merek baru.</p>
+      </div>
+
+      <div class="daftar-faq">
+        <!-- FAQ 1 -->
+        <div class="item-faq" onclick="toggleFaq(this)">
+          <div class="faq-pertanyaan">
+            <h3 class="judul-faq">Apa timeline keterlibatan standar untuk koleksi runway?</h3>
+            <span class="material-symbols-outlined ikon-faq">expand_more</span>
+          </div>
+          <div class="faq-jawaban sembunyi">
+            Siklus desain koleksi penuh kami berlangsung 10 hingga 14 minggu. Ini mencakup arsip riset, pengembangan siluet, brief weaving/dyeing tekstil kustom, lembar spesifikasi teknis, dan fitting. Untuk merek yang beroperasi pada jadwal terkompresi, modul Rapid Sprint kami mengirimkan kapsul 10-siluet yang disunting ketat dalam 6 minggu.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="item-faq" onclick="toggleFaq(this)">
+          <div class="faq-pertanyaan">
+            <h3 class="judul-faq">Siapa yang mempertahankan Hak Kekayaan Intelektual (IP) dan hak cipta desain?</h3>
+            <span class="material-symbols-outlined ikon-faq">expand_more</span>
+          </div>
+          <div class="faq-jawaban sembunyi">
+            Setelah penyelesaian milestone final, 100% hak eksploitasi komersial, pola grading, file Clo3D, dan master busana fisik beralih secara eksklusif dan di seluruh dunia ke entitas merek Anda. VELOCE Studio hanya mempertahankan hak tampilan arsip non-eksklusif dan atribusi katalog, kecuali status ghost-design privat penuh dikontrak secara tegas.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="item-faq" onclick="toggleFaq(this)">
+          <div class="faq-pertanyaan">
+            <h3 class="judul-faq">Apakah Anda menangani fabrikasi prototipe dan manufaktur fisik?</h3>
+            <span class="material-symbols-outlined ikon-faq">expand_more</span>
+          </div>
+          <div class="faq-jawaban sembunyi">
+            Ya. Ruang kerja atelier Paris dan Jakarta kami membangun muslin putaran pertama, prototipe haute couture, dan showpiece runway secara in-house. Untuk produksi komersial (manufaktur cut-and-sew), kami menjembatani jaringan terverifikasi pabrik mitra tier tinggi di Italia utara, Portugal, dan Jawa Barat dengan transparansi tenaga kerja teraudit dan fleksibilitas MOQ rendah.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="item-faq" onclick="toggleFaq(this)">
+          <div class="faq-pertanyaan">
+            <h3 class="judul-faq">Apakah ada persyaratan pesanan minimum atau batasan SKU?</h3>
+            <span class="material-symbols-outlined ikon-faq">expand_more</span>
+          </div>
+          <div class="faq-jawaban sembunyi">
+            Kami tidak memberlakukan minimum order quantities (MOQ) yang sewenang-wenang. Filosofi desain kami mengakomodasi segalanya mulai dari komisi red carpet bespoke tunggal hingga peluncuran ready-to-wear musiman 60-SKU yang luas. Kami menyesuaikan dossier teknis kami agar selaras secara spesifik dengan kemampuan produksi pabrikan Anda.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== KAKI / FOOTER ===== -->
+<footer class="kaki-utama">
+  <div class="kaki-wadah">
+    <div class="kaki-grid">
+      <div class="kaki-kolom kaki-kolom-besar">
+        <span class="teks-label">Archival Dispatch</span>
+        <h3 class="judul-kaki">The Atelier Monograph</h3>
+        <p class="kaki-deskripsi">Seasonal private viewings, bespoke haute couture releases, and critical design essays delivered discreetly to collectors.</p>
+        <form class="form-langganan">
+          <div class="input-grup">
+            <input class="input-teks" placeholder="ALAMAT EMAIL" type="email">
+            <button class="tombol-langganan" type="submit">Langganan</button>
+          </div>
+          <span class="teks-sangat-kecil">By invitation • Unsubscribe at discretion</span>
+        </form>
+      </div>
+
+      <div class="kaki-kolom">
+        <span class="teks-label">Lokasi Atelier</span>
+        <div class="daftar-lokasi">
+          <div>
+            <p class="lokasi-nama">Paris • VIIIe</p>
+            <p class="lokasi-alamat">24 Place Vendôme, 75001 Paris</p>
+            <p class="lokasi-email">atelier.paris@veloce.studio</p>
+          </div>
+          <div>
+            <p class="lokasi-nama">Milan • Quadrilatero</p>
+            <p class="lokasi-alamat">Via Monte Napoleone 8, 20121 Milano</p>
+            <p class="lokasi-email">atelier.milano@veloce.studio</p>
+          </div>
+          <div>
+            <p class="lokasi-nama">Jakarta • Menteng</p>
+            <p class="lokasi-alamat">Jl. Teuku Umar No. 12, Menteng 10350</p>
+            <p class="lokasi-email">atelier.jkt@veloce.studio</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kaki-kolom">
+        <span class="teks-label">Distingsi Kritis</span>
+        <div class="daftar-kutipan">
+          <div>
+            <span class="sumber-kutipan">Vogue International • 2024</span>
+            <p class="teks-kutipan">"A masterclass in tactile severity and structural restraint."</p>
+          </div>
+          <div>
+            <span class="sumber-kutipan">Harper's Bazaar • Atelier Award</span>
+            <p class="teks-kutipan">"VELOCE bridges classical couture drapery with avant-garde architectural geometry."</p>
+          </div>
+          <div>
+            <span class="sumber-kutipan">The Business of Fashion</span>
+            <p class="teks-kutipan">"Pioneering bespoke precision for the next generation of private collectors."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kaki-kolom">
+        <span class="teks-label">Sinyal</span>
+        <div class="daftar-sosial">
+          <a href="#">Instagram</a>
+          <a href="#">Behance</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Vogue Runway</a>
+          <a href="#">Archive Vault</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="kaki-bawah">
+      <div>© 2025 VELOCE STUDIO SAS. ALL ARCHIVAL RIGHTS RESERVED.</div>
+      <div class="kaki-tautan">
+        <a href="#">Terms of Bespoke</a>
+        <span>•</span>
+        <a href="#">Private Policy</a>
+        <span>•</span>
+        <a href="#">Editorial Credits</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+let langkahAktif = 1;
+
+function keLangkah(langkah) {
+  if (langkah === 2 && langkahAktif === 1) {
+    const merek = document.getElementById('nama-merek').value.trim();
+    const kontak = document.getElementById('nama-kontak').value.trim();
+    const email = document.getElementById('email-kontak').value.trim();
+    if (!merek || !kontak || !email) {
+      alert('Mohon lengkapi kolom Nama Merek, Nama Perwakilan, dan Email.');
+      return;
+    }
+  }
+
+  langkahAktif = langkah;
+
+  document.getElementById('langkah-1').classList.add('sembunyi');
+  document.getElementById('langkah-2').classList.add('sembunyi');
+  document.getElementById('langkah-3').classList.add('sembunyi');
+
+  const target = document.getElementById('langkah-' + langkah);
+  if (target) target.classList.remove('sembunyi');
+
+  const tracker = document.getElementById('tracker-isi');
+  const indikator = document.getElementById('teks-indikator-langkah');
+  const nomor = document.getElementById('teks-nomor-langkah');
+
+  if (langkah === 1) {
+    tracker.style.width = '33.33%';
+    indikator.textContent = 'Stage I • Client Identification';
+    nomor.textContent = '01 / 03';
+  } else if (langkah === 2) {
+    tracker.style.width = '66.66%';
+    indikator.textContent = 'Stage II • Mandate & Calendar';
+    nomor.textContent = '02 / 03';
+  } else if (langkah === 3) {
+    tracker.style.width = '100%';
+    indikator.textContent = 'Stage III • Aesthetic Dossier';
+    nomor.textContent = '03 / 03';
+  }
+}
+
+function kirimInquiry() {
+  const brief = document.getElementById('brief-proyek').value.trim();
+  if (!brief) {
+    alert('Mohon berikan ringkasan singkat visi atau target koleksi Anda.');
+    return;
+  }
+
+  document.getElementById('langkah-3').classList.add('sembunyi');
+  document.getElementById('tracker-isi').style.width = '100%';
+  document.getElementById('teks-indikator-langkah').textContent = 'Transmisi Selesai';
+  document.getElementById('teks-nomor-langkah').textContent = 'Terkirim';
+  document.getElementById('konfirmasi-form').classList.remove('sembunyi');
+}
+
+function resetForm() {
+  document.getElementById('form-inquiry').reset();
+  document.getElementById('konfirmasi-form').classList.add('sembunyi');
+  document.getElementById('nama-file').classList.add('sembunyi');
+  keLangkah(1);
+}
+
+// Dropzone
+const dropzone = document.getElementById('dropzone');
+const fileMoodboard = document.getElementById('file-moodboard');
+const namaFile = document.getElementById('nama-file');
+
+if (dropzone && fileMoodboard) {
+  dropzone.addEventListener('click', () => fileMoodboard.click());
+  fileMoodboard.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) {
+      namaFile.textContent = 'Terlampir: ' + e.target.files[0].name;
+      namaFile.classList.remove('sembunyi');
+    }
+  });
+}
+
+// FAQ Accordion
+function toggleFaq(element) {
+  const jawaban = element.querySelector('.faq-jawaban');
+  const ikon = element.querySelector('.ikon-faq');
+  const terbuka = !jawaban.classList.contains('sembunyi');
+
+  document.querySelectorAll('.faq-jawaban').forEach(j => j.classList.add('sembunyi'));
+  document.querySelectorAll('.ikon-faq').forEach(i => i.style.transform = 'rotate(0deg)');
+
+  if (!terbuka) {
+    jawaban.classList.remove('sembunyi');
+    ikon.style.transform = 'rotate(180deg)';
+  }
+}
+</script>
+
+</body>
+</html>
